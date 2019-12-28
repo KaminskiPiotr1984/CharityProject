@@ -1,6 +1,5 @@
 package pl.coderslab.charity.aplication.domain.entities;
 
-
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,6 +19,7 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable=false, unique=true)
     private String name;
 
     public Category() {
