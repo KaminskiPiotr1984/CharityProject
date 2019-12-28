@@ -4,6 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -15,7 +16,7 @@ import java.util.List;
 @Table(name = "donations")
 @Getter
 @Setter
-@ToString
+@ToString(exclude = {"institutions", "categories"})
 @EqualsAndHashCode(of = "id")
 public class Donation {
 
@@ -26,13 +27,11 @@ public class Donation {
     @Column(nullable=false)
     private Long quantity;
 
-//    @ManyToMany
-//    @Column(nullable=false)
-//    private List<Category> categories = new ArrayList<>();
-//
-//    @ManyToOne
-//    @Column(nullable=false)
-//    private Institution institutions;
+    @ManyToMany
+    private List<Category> categories = new ArrayList<>();
+
+    @ManyToOne
+    private Institution institutions;
 
     @Column(nullable=false)
     private String street;
@@ -44,12 +43,12 @@ public class Donation {
     private String zipCode;
 
     @Column(nullable=false)
-
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate pickUpDate;
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable=false)
     private LocalTime pickUpTime;
+
     private String pickUpComment;
 
 }
