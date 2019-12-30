@@ -24,7 +24,7 @@ public class Donation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private Long quantity;
 
     @ManyToMany
@@ -33,20 +33,20 @@ public class Donation {
     @ManyToOne
     private Institution institutions;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String street;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String city;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String zipCode;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate pickUpDate;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private LocalTime pickUpTime;
 
     private String pickUpComment;

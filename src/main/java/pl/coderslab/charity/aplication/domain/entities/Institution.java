@@ -20,10 +20,10 @@ public class Institution {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @Column(nullable=false, unique=true)
+    @Column(nullable = false, unique = true)
     private String name;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String description;
 
 
