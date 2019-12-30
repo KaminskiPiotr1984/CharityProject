@@ -9,11 +9,11 @@ import pl.coderslab.charity.aplication.domain.repositories.InstitutionsRepositor
 
 @Controller
 @Slf4j
-
+@RequestMapping("/")
 public class HomeController {
 
 
-    @RequestMapping({"/", "home", "landing page", "charity"})
+    @RequestMapping({"home", "landing page", "charity"})
     public String homeAction(Model model) {
         return "index";
     }
