@@ -112,19 +112,21 @@
 
             </li>
             <c:forEach items="${institutions}" var="institution" varStatus="stat">
-                <li>
-                    <c:if test="${institution.id%2!=0}">
-                        <div class="col">
-                            <div class="title">${institution.name}</div>
-                            <div class="subtitle">Cel i misja: ${institution.description}</div>
-                        </div>
-                    </c:if>
-                    <c:if test="${institution.id%2==0}">
+                <c:if test="${stat.count % 2 != 0}">
+                    <li>
                     <div class="col">
                         <div class="title">${institution.name}</div>
                         <div class="subtitle">Cel i misja: ${institution.description}</div>
                     </div>
-                    </c:if>
+                </c:if>
+                <c:if test="${stat.count % 2 == 0}">
+                    <div class="col">
+                        <div class="title">${institution.name}</div>
+                        <div class="subtitle">Cel i misja: ${institution.description}</div>
+                    </div>
+                    </li>
+                </c:if>
+            </c:forEach>
                         <%--            </li>--%>
 
                         <%--                                <li>--%>
@@ -136,9 +138,11 @@
                         <%--                                        <div class="title">Fundacja “Bez domu”</div>--%>
                         <%--                                        <div class="subtitle">Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania</div>--%>
                         <%--                                    </div>--%>
+            <c:if test="${institutions.size() % 2 != 0}">
+            </li>
+            </c:if>
 
-                </li>
-            </c:forEach>
+
         </ul>
     </div>
 
