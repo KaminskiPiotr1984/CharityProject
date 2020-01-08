@@ -31,6 +31,11 @@ public class HomeController {
         return "index";
     }
 
+    @GetMapping("/form")
+    public String formAction(Model model) {
+        model.addAttribute("institutions", institutionsRepository.findAll());
 
+        return "form";
+    }
 
 }
