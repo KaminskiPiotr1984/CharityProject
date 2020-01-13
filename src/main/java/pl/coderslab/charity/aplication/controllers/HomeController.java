@@ -30,7 +30,7 @@ public class HomeController {
     @GetMapping
     public String homeAction(Model model) {
         model.addAttribute("institutions", institutionsRepository.findAll());
-        model.addAttribute("donations", donationsRepository.findAll());
+        model.addAttribute("donations", donationsRepository.count());
 
         return "index";
     }
