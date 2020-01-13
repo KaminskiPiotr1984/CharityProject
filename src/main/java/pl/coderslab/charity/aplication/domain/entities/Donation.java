@@ -49,6 +49,9 @@ public class Donation {
     @Column(nullable = false)
     private LocalTime pickUpTime;
 
+    @Column(nullable = false)
+    private Long phone;
+
     private String pickUpComment;
 
 }
