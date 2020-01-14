@@ -83,7 +83,7 @@
         <%--                         items="${category}"/>--%>
 
 
-        <form:form action="/form" method="post" modelAttribute="donation">
+        <form:form action="/form" method="post" modelAttribute="donation" name="donationForm">
             <!-- STEP 1: class .active is switching steps -->
             <div data-step="1" class="active">
                 <h3>Zaznacz co chcesz oddać:</h3>
@@ -95,12 +95,12 @@
                     <div class="form-group form-group--checkbox">
 
                         <label>
-<%--                            <span class="checkbox"></span>--%>
+                                <%--                            <span class="checkbox"></span>--%>
 
-<%--                            <span class="description">--%>
+                                <%--                            <span class="description">--%>
 
                             <div class="title">${category.name}</div>
-                            </span>
+<%--                            </span>--%>
                         </label>
                     </div>
                 </c:forEach>
@@ -156,7 +156,7 @@
 
                         <form:input path="quantity" type="number" name="bags" step="1" min="1"/>
 
-<%--                        <input type="number" name="bags" step="1" min="1"/>--%>
+                            <%--                        <input type="number" name="bags" step="1" min="1"/>--%>
                     </label>
                 </div>
 
@@ -217,14 +217,14 @@
 
                             <label> Ulica <form:input path="street" type="text" name="address"/> </label>
 
-<%--                            <label> Ulica <input type="text" name="address"/> </label>--%>
+                                <%--                            <label> Ulica <input type="text" name="address"/> </label>--%>
                         </div>
 
                         <div class="form-group form-group--inline">
 
                             <label> Miasto <form:input path="city" type="text" name="city"/> </label>
 
-<%--                            <label> Miasto <input type="text" name="city"/> </label>--%>
+                                <%--                            <label> Miasto <input type="text" name="city"/> </label>--%>
                         </div>
 
                         <div class="form-group form-group--inline">
@@ -232,7 +232,7 @@
 
                                 Kod pocztowy <form:input path="zipCode" type="text" name="postcode"/>
 
-<%--                                Kod pocztowy <input type="text" name="postcode"/>--%>
+                                    <%--                                Kod pocztowy <input type="text" name="postcode"/>--%>
                             </label>
                         </div>
 
@@ -241,7 +241,7 @@
 
                                 Numer telefonu <form:input path="phone" type="phone" name="phone"/>
 
-<%--                                Numer telefonu <input type="phone" name="phone"/>--%>
+                                    <%--                                Numer telefonu <input type="phone" name="phone"/>--%>
                             </label>
                         </div>
                     </div>
@@ -252,14 +252,14 @@
 
                             <label> Data <form:input path="pickUpDate" type="date" name="data"/> </label>
 
-<%--                            <label> Data <input type="date" name="data"/> </label>--%>
+                                <%--                            <label> Data <input type="date" name="data"/> </label>--%>
                         </div>
 
                         <div class="form-group form-group--inline">
 
                             <label> Godzina <form:input path="pickUpTime" type="time" name="time"/> </label>
 
-<%--                            <label> Godzina <input type="time" name="time"/> </label>--%>
+                                <%--                            <label> Godzina <input type="time" name="time"/> </label>--%>
                         </div>
 
                         <div class="form-group form-group--inline">
