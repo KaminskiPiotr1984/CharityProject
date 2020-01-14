@@ -35,9 +35,11 @@
     <form>
         <div class="form-group">
 <%--            <form:input path="email" type="email" name="email" placeholder="Email" />--%>
+            <input type="email" name="email" placeholder="Email" />
         </div>
         <div class="form-group">
 <%--            <form:input path="password" type="password" name="password" placeholder="Hasło" />--%>
+            <input type="password" name="password" placeholder="Hasło" />
             <a href="#" class="btn btn--small btn--without-border reset-password">Przypomnij hasło</a>
         </div>
 
