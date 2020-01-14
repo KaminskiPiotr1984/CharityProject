@@ -6,12 +6,14 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
 @Getter
 @Setter
-@ToString
+@ToString(exclude = "password")
 @EqualsAndHashCode(of = "id")
 public class User {
 
@@ -24,5 +26,14 @@ public class User {
 
     @Column(nullable = false, unique = true)
     private String email;
+
+    @Column(nullable = false)
+    private String password;
+
+    @Column(nullable = false)
+    private Boolean active = Boolean.FALSE;
+
+    @ManyToMany
+    private Set<Role> roles = new HashSet<>();
 
 }
