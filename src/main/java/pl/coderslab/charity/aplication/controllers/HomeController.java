@@ -24,17 +24,22 @@ public class HomeController {
     }
 
 
-
-
-
     @GetMapping
     public String homeAction(Model model) {
         model.addAttribute("institutions", institutionsRepository.findAll());
-        model.addAttribute("donations", donationsRepository.count());
+        model.addAttribute("donationsQuantity", donationsRepository.count());
 
         return "index";
     }
 
+    @GetMapping("form-confirmation")
+    public String formconfirmation() {
+        return "form-confirmation";
+    }
 
+    @GetMapping("register")
+    public String registerPrepare() {
+        return "register";
+    }
 
 }
