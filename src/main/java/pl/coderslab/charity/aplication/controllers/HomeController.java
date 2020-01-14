@@ -33,13 +33,18 @@ public class HomeController {
     }
 
     @GetMapping("form-confirmation")
-    public String formconfirmation() {
+    public String formConfirmation() {
         return "form-confirmation";
     }
 
     @GetMapping("register")
     public String registerPrepare() {
         return "register";
+    }
+
+    @GetMapping("login")
+    public String logInPrepare() {
+        return "login";
     }
 
 }
