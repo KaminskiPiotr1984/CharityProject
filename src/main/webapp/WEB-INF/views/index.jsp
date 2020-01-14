@@ -8,7 +8,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Document</title>
+    <title>Index</title>
 
     <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>"/>
 </head>
@@ -32,7 +32,7 @@
 <section class="stats">
     <div class="container container--85">
         <div class="stats--item">
-            <em>${donations}</em>
+            <em>${donationsQuantity}</em>
 
             <h3>Oddanych worków</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est beatae, quod accusamus illum
