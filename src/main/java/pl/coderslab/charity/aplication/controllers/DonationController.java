@@ -46,7 +46,7 @@ public class DonationController {
             return "form";
         }
         donationsRepository.save(donation);
-        return "/";
+        return "/form-confirmation";
     }
 
 
