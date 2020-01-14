@@ -43,7 +43,7 @@
         </div>
         <div class="form-group">
             <%--            <form:input path="password2" type="password" name="password2" placeholder="Powtórz hasło"/>--%>
-                <input type="password" name="password2" placeholder="Powtórz hasło"/>--%>
+                <input type="password" name="password2" placeholder="Powtórz hasło"/>
         </div>
 
         <div class="form-group form-group--buttons">
