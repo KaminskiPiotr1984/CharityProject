@@ -1,4 +1,5 @@
-package pl.coderslab.charity.aplication.dtos.impl;
+package pl.coderslab.charity.aplication.services.impl;
+
 
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -29,7 +30,7 @@ public class DefaultRegistrationService implements RegistrationService {
     public void register(RegistrationDataDTO registrationData) {
         ModelMapper mapper = new ModelMapper();
         User user = mapper.map(registrationData, User.class);
-        user.setActive(Boolean.TRUE);
+//        user.setActive(Boolean.TRUE);
         String encodedPassword = passwordEncoder.encode(registrationData.getPassword());
         user.setPassword(encodedPassword);
         Role roleUser = roleRepository.getByName("ROLE_USER");
