@@ -21,8 +21,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @Column(nullable = false, unique = true)
-    private String name;
+//    @Column(nullable = false, unique = true)
+//    private String name;
 
     @Column(nullable = false, unique = true)
     private String email;
@@ -30,8 +30,8 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
-    private Boolean active = Boolean.FALSE;
+//    @Column(nullable = false)
+//    private Boolean active = Boolean.FALSE;
 
     @ManyToMany
     private Set<Role> roles = new HashSet<>();
