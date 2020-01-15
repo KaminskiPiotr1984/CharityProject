@@ -7,9 +7,9 @@ import javax.validation.constraints.*;
 @Data
 public class RegistrationDataDTO {
 
-    @NotBlank
-    @Size(min = 3, max = 12)
-    private String username;
+//    @NotBlank
+//    @Size(min = 3, max = 12)
+//    private String username;
     @NotBlank
     @Email
     private String email;
@@ -19,7 +19,7 @@ public class RegistrationDataDTO {
     @NotBlank
     @Size(min = 4, max = 12)
     private String rePassword;
-    @NotNull
-    @AssertTrue
-    private Boolean termsAcceptance;
+//    @NotNull
+//    @AssertTrue
+//    private Boolean termsAcceptance;
 }
