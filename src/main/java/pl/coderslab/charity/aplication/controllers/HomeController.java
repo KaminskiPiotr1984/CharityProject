@@ -37,10 +37,6 @@ public class HomeController {
         return "form-confirmation";
     }
 
-    @GetMapping("register")
-    public String registerPrepare() {
-        return "register";
-    }
 
     @GetMapping("login")
     public String logInPrepare() {
